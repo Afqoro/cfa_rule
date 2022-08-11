@@ -245,8 +245,6 @@ payload:
   - DOMAIN-SUFFIX,clickadilla.com
   - DOMAIN-SUFFIX,adxadserv.com
   - DOMAIN-SUFFIX,static-clst.avgle.com
-  - DOMAIN-SUFFIX,
-  - DOMAIN-SUFFIX,
   
   # > customme
   - DOMAIN-SUFFIX,forlumineoner.com
@@ -256,5 +254,27 @@ payload:
   - DOMAIN-SUFFIX,kxnggkh2nj.com
   - DOMAIN-SUFFIX,limurol.com
   - DOMAIN-SUFFIX,abservinean.com
-  - DOMAIN-SUFFIX,
+  - DOMAIN-SUFFIX,static.adsafeprotected.com
+  - DOMAIN-SUFFIX,cloudflareinsights.com
+  - DOMAIN-SUFFIX,aeeg5idiuenbi7erger.com
+  - DOMAIN-SUFFIX,histats.com
+  - DOMAIN-SUFFIX,fdelphaswcealifornica.com
+  - DOMAIN-SUFFIX,morrowfreezer.com
+  - DOMAIN-SUFFIX,akmxts.com
+  - DOMAIN-SUFFIX,berthsorry.com
+  - DOMAIN-SUFFIX,xxxijmp.com
+  - DOMAIN-SUFFIX,jads.co
+  - DOMAIN-SUFFIX,berthsorry.com
+  - DOMAIN-SUFFIX,lanternpossibly.com
+  - DOMAIN-SUFFIX,cloudflareinsights.com
+  - DOMAIN-SUFFIX,plumposterity.com
+  - DOMAIN-SUFFIX,amung.us
+  - DOMAIN-SUFFIX,daisycontroversy.com
+  - DOMAIN-SUFFIX,juicyads.com
+  - DOMAIN-SUFFIX,xlviirdr.com
+  - DOMAIN-SUFFIX,addthis.com
+  - DOMAIN-SUFFIX,jwpcdn.com
+  - DOMAIN-SUFFIX,cuddlethehyena.com
+  - DOMAIN-SUFFIX,imasdk.googleapis.com
+  - DOMAIN-SUFFIX,fdelphaswcealifornica.com
   
