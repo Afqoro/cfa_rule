@@ -6,7 +6,6 @@ payload:
   - DOMAIN,app.adjust.world
   - DOMAIN,ml.CS30.NET
   - DOMAIN,pv.sohu.com
-  - DOMAIN-SUFFIX,*.youngjoygame.com
   - DOMAIN-SUFFIX,*.yuanzhanapp.com
   - DOMAIN-SUFFIX,*.aihelp.net
   - DOMAIN-SUFFIX,mobilelegends.com
