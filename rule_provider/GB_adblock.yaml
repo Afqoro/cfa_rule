@@ -243,12 +243,18 @@ payload:
   - DOMAIN-SUFFIX,syndication.exosrv.com
   - DOMAIN-SUFFIX,nereserv.com
   - DOMAIN-SUFFIX,clickadilla.com
+  - DOMAIN-SUFFIX,adxadserv.com
+  - DOMAIN-SUFFIX,static-clst.avgle.com
   - DOMAIN-SUFFIX,
   - DOMAIN-SUFFIX,
-  - DOMAIN-SUFFIX,
-  - DOMAIN-SUFFIX,
-  - DOMAIN-SUFFIX,
-  - DOMAIN-SUFFIX,
-  - DOMAIN-SUFFIX,
+  
+  # > customme
+  - DOMAIN-SUFFIX,forlumineoner.com
+  - DOMAIN-SUFFIX,jaavnacsdw.com
+  - DOMAIN-SUFFIX,taaqhr6axacd2um.com
+  - DOMAIN-SUFFIX,stagepopkek.com
+  - DOMAIN-SUFFIX,kxnggkh2nj.com
+  - DOMAIN-SUFFIX,limurol.com
+  - DOMAIN-SUFFIX,abservinean.com
   - DOMAIN-SUFFIX,
   
