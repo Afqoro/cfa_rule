@@ -120,65 +120,65 @@ rule-providers:
     type: http
     behavior: classical
     path: "./GB_direct.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_direct.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_direct.yaml
     interval: 86400
   rule_reject:
     type: http
     behavior: classical
     path: "./GB_reject.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_reject.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_reject.yaml
     interval: 86400
   rule_browsing:
     type: http
     behavior: classical
     path: "./GB_browsing.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_browsing.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_browsing.yaml
     interval: 86400
   rule_streaming:
     type: http
     behavior: classical
     path: "./GB_streaming.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_streaming.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_streaming.yaml
     interval: 86400
   rule_sosmed:
     type: http
     behavior: classical
     path: "./GB_sosmed.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_sosmed.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_sosmed.yaml
     interval: 86400
   rule_ML:
     type: http
     behavior: classical
     path: "./GB_ML.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_ML.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_ML.yaml
     interval: 86400
   rule_PUBG:
     type: http
     behavior: classical
     path: "./GB_PUBG.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_PUBG.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_PUBG.yaml
     interval: 86400
   rule_FF:
     type: http
     behavior: classical
     path: "./GB_FF.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_FF.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_FF.yaml
     interval: 86400
   rule_gameumum:
     type: http
     behavior: classical
     path: "./GB_gameumum.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_gameumum.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_gameumum.yaml
     interval: 86400
   rule_whatsapp:
     type: http
     behavior: classical
     path: "./GB_whatsapp.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_whatsapp.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_whatsapp.yaml
     interval: 86400
   rule_adblock:
     type: http
     behavior: classical
     path: "./GB_adblock.yaml"
-    url: https://raw.githubusercontent.com/GboyGud/cfa_rule/main/rule_provider/GB_adblock.yaml
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_adblock.yaml
     interval: 86400
