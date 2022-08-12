@@ -1,14 +1,14 @@
 proxy-providers:
-  PG_UMUM:
+  AKUN_INDONESIA:
     type: file
-    path: "./AKUN_UMUM.yaml"
+    path: "./AKUN_INDONESIA.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 30
-  PG_GAMING:
+  AKUN_SINGAPURA:
     type: file
-    path: "./AKUN_GAME.yaml"
+    path: "./AKUN_SINGAPURA.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -18,37 +18,41 @@ proxy-groups:
   type: url-test
   disable-udp: false
   use:
-  - PG_UMUM
-  - PG_GAMING
+  - AKUN_INDONESIA
+  - AKUN_SINGAPURA
   url: http://www.gstatic.com/generate_204
-  interval: '30'
+  interval: '10'
   tolerance: '5'
 - name: 🟠 STREAMING 🟠
   type: load-balance
   strategy: round-robin
   disable-udp: false
   use:
-  - PG_UMUM
-  - PG_GAMING
+  - AKUN_SINGAPURA
   url: http://www.gstatic.com/generate_204
-  interval: '30'
+  interval: '360'
 - name: 🟢 SOSMED 🟢
   type: fallback
   disable-udp: false
   use:
-  - PG_UMUM
-  - PG_GAMING
+  - AKUN_INDONESIA
   url: http://www.gstatic.com/generate_204
-  interval: '30' 
-- name: 🔵 GAME 🔵
+  interval: '10' 
+- name: 🇮🇩 TRAFFIC INDO 🇮🇩
+  type: fallback
+  disable-udp: false
+  use:
+  - AKUN_INDONESIA
+  url: http://www.gstatic.com/generate_204
+  interval: '10'
+- name: ✅ PILIHAN ✅
   type: select
   disable-udp: false
-  proxies:
-  - DIRECT
   use:
-  - PG_GAMING
+  - AKUN_INDONESIA
+  - AKUN_SINGAPURA
   url: http://www.gstatic.com/generate_204
-  interval: '99'
+  interval: '10'  
 - name: 🔴 ADBLOCK 🔴
   type: select
   disable-udp: false
@@ -58,17 +62,15 @@ proxy-groups:
   - 🟠 STREAMING 🟠
   - 🟢 SOSMED 🟢
   url: http://www.gstatic.com/generate_204
-  interval: '99'
-- name: 🟣 WHATSAPP 🟣
+  interval: '10'
+- name: 🔵 WHATSAPP 🔵
   type: select
   disable-udp: false
   proxies:
   - DIRECT
-  - 🟡 BROWSING 🟡
-  - 🟠 STREAMING 🟠
-  - 🟢 SOSMED 🟢
+  - 🇮🇩 TRAFFIC INDO 🇮🇩
   url: http://www.gstatic.com/generate_204
-  interval: '99'
+  interval: '10'
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -108,11 +110,8 @@ rules:
 - RULE-SET,rule_browsing,🟡 BROWSING 🟡
 - RULE-SET,rule_streaming,🟠 STREAMING 🟠
 - RULE-SET,rule_sosmed,🟢 SOSMED 🟢
-- RULE-SET,rule_ML,🔵 GAME 🔵
-- RULE-SET,rule_PUBG,🔵 GAME 🔵
-- RULE-SET,rule_FF,🔵 GAME 🔵
-- RULE-SET,rule_gameumum,🔵 GAME 🔵
-- RULE-SET,rule_whatsapp,🟣 WHATSAPP 🟣
+- RULE-SET,rule_trafficindo,🇮🇩 TRAFFIC INDO 🇮🇩
+- RULE-SET,rule_whatsapp,🔵 WHATSAPP 🔵
 - RULE-SET,rule_adblock,🔴 ADBLOCK 🔴
 - MATCH,GLOBAL
 rule-providers:
@@ -146,30 +145,12 @@ rule-providers:
     path: "./GB_sosmed.yaml"
     url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_sosmed.yaml
     interval: 86400
-  rule_ML:
+  rule_trafficindo:
     type: http
     behavior: classical
-    path: "./GB_ML.yaml"
-    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_ML.yaml
-    interval: 86400
-  rule_PUBG:
-    type: http
-    behavior: classical
-    path: "./GB_PUBG.yaml"
-    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_PUBG.yaml
-    interval: 86400
-  rule_FF:
-    type: http
-    behavior: classical
-    path: "./GB_FF.yaml"
-    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_FF.yaml
-    interval: 86400
-  rule_gameumum:
-    type: http
-    behavior: classical
-    path: "./GB_gameumum.yaml"
-    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_gameumum.yaml
-    interval: 86400
+    path: "./GB_trafficindo.yaml"
+    url: https://raw.githubusercontent.com/Afqoro/cfa_rule/main/rule_provider/GB_trafficindo.yaml
+    interval: 86400    
   rule_whatsapp:
     type: http
     behavior: classical
