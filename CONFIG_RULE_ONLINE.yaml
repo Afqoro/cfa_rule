@@ -15,27 +15,33 @@ proxy-providers:
       interval: 30
 proxy-groups:
 - name: 🟡 BROWSING 🟡
-  type: url-test
+  type: select
   disable-udp: false
-  use:
-  - AKUN_INDONESIA
-  - AKUN_SINGAPURA
+  proxies:
+  - 🟨 BEST PING 🟨
+  - 🟧 LOADBALANCING 🟧
+  - 🟩 FALLBACK 🟩
+  - ✅ PILIHAN ✅
   url: http://www.gstatic.com/generate_204
   interval: '10'
-  tolerance: '5'
 - name: 🟠 STREAMING 🟠
-  type: load-balance
-  strategy: round-robin
+  type: select
   disable-udp: false
-  use:
-  - AKUN_SINGAPURA
+  proxies:
+  - 🟨 BEST PING 🟨
+  - 🟧 LOADBALANCING 🟧
+  - 🟩 FALLBACK 🟩
+  - ✅ PILIHAN ✅  
   url: http://www.gstatic.com/generate_204
-  interval: '360'
+  interval: '10'
 - name: 🟢 SOSMED 🟢
-  type: fallback
+  type: select
   disable-udp: false
-  use:
-  - AKUN_INDONESIA
+  proxies:
+  - 🟨 BEST PING 🟨
+  - 🟧 LOADBALANCING 🟧
+  - 🟩 FALLBACK 🟩
+  - 🇮🇩 TRAFFIC INDO 🇮🇩
   url: http://www.gstatic.com/generate_204
   interval: '10' 
 - name: 🇮🇩 TRAFFIC INDO 🇮🇩
@@ -45,6 +51,32 @@ proxy-groups:
   - AKUN_INDONESIA
   url: http://www.gstatic.com/generate_204
   interval: '10'
+ name: 🟨 BEST PING 🟨
+  type: url-test
+  disable-udp: false
+  use:
+  - AKUN_INDONESIA
+  - AKUN_SINGAPURA
+  url: http://www.gstatic.com/generate_204
+  interval: '10'
+  tolerance: '5'
+- name: 🟧 LOADBALANCING 🟧
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - AKUN_INDONESIA
+  - AKUN_SINGAPURA
+  url: http://www.gstatic.com/generate_204
+  interval: '360'
+- name: 🟩 FALLBACK 🟩
+  type: fallback
+  disable-udp: false
+  use:
+  - AKUN_INDONESIA
+  - AKUN_SINGAPURA
+  url: http://www.gstatic.com/generate_204
+  interval: '10'  
 - name: ✅ PILIHAN ✅
   type: select
   disable-udp: false
@@ -53,14 +85,15 @@ proxy-groups:
   - AKUN_SINGAPURA
   url: http://www.gstatic.com/generate_204
   interval: '10'  
-- name: 🔴 ADBLOCK 🔴
+- name: ⛔ ADBLOCK ⛔
   type: select
   disable-udp: false
   proxies:
   - REJECT
-  - 🟡 BROWSING 🟡
-  - 🟠 STREAMING 🟠
-  - 🟢 SOSMED 🟢
+  - 🟨 BEST PING 🟨
+  - 🟧 LOADBALANCING 🟧
+  - 🟩 FALLBACK 🟩
+  - ✅ PILIHAN ✅
   url: http://www.gstatic.com/generate_204
   interval: '10'
 - name: 🔵 WHATSAPP 🔵
@@ -112,8 +145,8 @@ rules:
 - RULE-SET,rule_sosmed,🟢 SOSMED 🟢
 - RULE-SET,rule_trafficindo,🇮🇩 TRAFFIC INDO 🇮🇩
 - RULE-SET,rule_whatsapp,🔵 WHATSAPP 🔵
-- RULE-SET,rule_adblock,🔴 ADBLOCK 🔴
-- MATCH,GLOBAL
+- RULE-SET,rule_adblock⛔ ADBLOCK ⛔
+- MATCH,🟡 BROWSING 🟡
 rule-providers:
   rule_direct:
     type: http
