@@ -18,29 +18,29 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - 🟨 BEST PING 🟨
-  - 🟧 LOADBALANCING 🟧
-  - 🟩 FALLBACK 🟩
-  - ✅ PILIHAN ✅
+  - BEST PING
+  - LOADBALANCING
+  - FALLBACK
+  - PILIHAN
   url: http://www.gstatic.com/generate_204
   interval: '10'
 - name: 🟠 STREAMING 🟠
   type: select
   disable-udp: false
   proxies:
-  - 🟨 BEST PING 🟨
-  - 🟧 LOADBALANCING 🟧
-  - 🟩 FALLBACK 🟩
-  - ✅ PILIHAN ✅  
+  - BEST PING
+  - LOADBALANCING
+  - FALLBACK
+  - PILIHAN
   url: http://www.gstatic.com/generate_204
   interval: '10'
 - name: 🟢 SOSMED 🟢
   type: select
   disable-udp: false
   proxies:
-  - 🟨 BEST PING 🟨
-  - 🟧 LOADBALANCING 🟧
-  - 🟩 FALLBACK 🟩
+  - BEST PING
+  - LOADBALANCING
+  - FALLBACK
   - 🇮🇩 TRAFFIC INDO 🇮🇩
   url: http://www.gstatic.com/generate_204
   interval: '10' 
@@ -51,7 +51,7 @@ proxy-groups:
   - AKUN_INDONESIA
   url: http://www.gstatic.com/generate_204
   interval: '10'
- name: 🟨 BEST PING 🟨
+- name: BEST PING 
   type: url-test
   disable-udp: false
   use:
@@ -60,7 +60,7 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: '10'
   tolerance: '5'
-- name: 🟧 LOADBALANCING 🟧
+- name: LOADBALANCING
   type: load-balance
   strategy: round-robin
   disable-udp: false
@@ -69,7 +69,7 @@ proxy-groups:
   - AKUN_SINGAPURA
   url: http://www.gstatic.com/generate_204
   interval: '360'
-- name: 🟩 FALLBACK 🟩
+- name: FALLBACK
   type: fallback
   disable-udp: false
   use:
@@ -77,7 +77,7 @@ proxy-groups:
   - AKUN_SINGAPURA
   url: http://www.gstatic.com/generate_204
   interval: '10'  
-- name: ✅ PILIHAN ✅
+- name: PILIHAN
   type: select
   disable-udp: false
   use:
@@ -90,10 +90,10 @@ proxy-groups:
   disable-udp: false
   proxies:
   - REJECT
-  - 🟨 BEST PING 🟨
-  - 🟧 LOADBALANCING 🟧
-  - 🟩 FALLBACK 🟩
-  - ✅ PILIHAN ✅
+  - BEST PING
+  - LOADBALANCING
+  - FALLBACK
+  - PILIHAN
   url: http://www.gstatic.com/generate_204
   interval: '10'
 - name: 🔵 WHATSAPP 🔵
@@ -145,7 +145,7 @@ rules:
 - RULE-SET,rule_sosmed,🟢 SOSMED 🟢
 - RULE-SET,rule_trafficindo,🇮🇩 TRAFFIC INDO 🇮🇩
 - RULE-SET,rule_whatsapp,🔵 WHATSAPP 🔵
-- RULE-SET,rule_adblock⛔ ADBLOCK ⛔
+- RULE-SET,rule_adblock,⛔ ADBLOCK ⛔
 - MATCH,🟡 BROWSING 🟡
 rule-providers:
   rule_direct:
